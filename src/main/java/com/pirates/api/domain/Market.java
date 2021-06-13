@@ -12,6 +12,16 @@ public class Market {
     private String phone; //전화번호
     private List<Businesstimes> businessTimes; //영업시간
 
+    private List<String> holidays; //휴무일
+
+    public List<String> getHolidays() {
+        return holidays;
+    }
+
+    public void setHolidays(List<String> holidays) {
+        this.holidays = holidays;
+    }
+
     public Market() {
 
     }

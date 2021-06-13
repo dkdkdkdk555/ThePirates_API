@@ -28,4 +28,9 @@ public class MarketService {
     public void saveBusiness(Market market) {
         repository.saveBusiness(market.getBusinessTimes());
     }
+
+    // 점포 휴무일 등록 로직
+    public void saveHolidays(Market market) {
+        repository.saveHolidays(market);
+    }
 }

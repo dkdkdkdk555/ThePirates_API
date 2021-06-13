@@ -58,5 +58,15 @@ public class JdbcTemplateMarketRepository implements MarketRepository {
         }
     }
 
+    @Override //점포 휴무일 등록
+    public void saveHolidays(Market market) {
+        List<String> holidays = market.getHolidays();
+        String holiday = "";
+        for(String str : holidays) {
+            holiday += "," + str;
+        }
+        long id = market.getId();
+        jdbcTemplate.update("update market set holidays = ? where id = ?", holiday, id);
 
+    }
 }

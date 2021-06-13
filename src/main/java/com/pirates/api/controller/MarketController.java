@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.yaml.snakeyaml.error.Mark;
 
 import java.util.List;
 
@@ -28,5 +29,13 @@ public class MarketController {
         marketService.save(market);
         marketService.saveBusiness(market);
     }
+
+    @PostMapping("/holiday")
+    @ResponseBody
+    public void setHolidays(@RequestBody Market market) {
+        marketService.saveHolidays(market);
+
+    }
+
 
 }

@@ -10,5 +10,9 @@ public interface MarketRepository {
     //점포추가
     void save(Market market);
 
+    //점포 영업시간 추가
     void saveBusiness(List<Businesstimes> businesstimes);
+
+    //점포 휴무일 추가
+    void saveHolidays(Market market);
 }
